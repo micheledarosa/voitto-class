@@ -1,0 +1,63 @@
+- OUTRA FORMA DE MONTAR A TABLE:
+
+const studentsTable = document.querySelector("table tbody");
+studentsTable.innerHTML = students.reduce(buildStudentRow, " ");
+
+function buildStudentRow(student) {
+    return tableBody + `   
+    <tr>
+        <td>${student.name}</td>
+        <td>${student.firstExam}</td>
+        <td>${student.secondExam}</td>
+        <td>${student.project}</td>
+        <td>${student.finalGrade}</td>
+    </tr>
+    `
+}
+
+-----------------------------------------------------------------------------------------------------
+
+- SELECIONANDO O INPUT E ALTERANDO O PLACEHOLDER:
+
+const inputElement = document.querySelector("input");
+inputElement.placeholder = "Digite o nome do aluno";
+
+-----------------------------------------------------------------------------------------------------
+
+- ADICIONAR NA TAG HTML:
+
+onclick="changeHeaderBackgroundColor(this)"
+
+- COLOCA UMA COR ALEATÓRIA NO HEADER AO CLICAR:
+
+function changeHeaderBackgroundColor(element) {
+    const colorCode = Math.floor(Math.random() * 1000000);
+    element.style.backgroundColor = `#${colorCode}`;
+}
+
+-----------------------------------------------------------------------------------------------------
+
+const inputElement = document.querySelector("input");
+inputElement.addEventListener("keyup", myFunction)  // não precisa colocar o "on"
+
+- TARGET -> mostra o elemento que disparou o evento
+function myFunction(event) {
+    console.log(event.target.value)
+}
+
+-----------------------------------------------------------------------------------------------------
+
+- LIMPA O FORMULÁRIO
+function clearForm(formElement) {
+    const inputElements = formElement.querySelectorAll("input")   // buscando os inputs dentro do form selecionado
+    inputElements.forEach(input => input.value = null)
+}
+
+-----------------------------------------------------------------------------------------------------
+
+- MATCH -> busca pela string exata -> corrigir com tolower ou upper
+if (studentName.match(inputName)) {
+    student.parentNode.classList.remove("hidden");
+} else {
+    student.parentNode.classList.add("hidden");           
+}

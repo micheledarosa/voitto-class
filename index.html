@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Voitto Class</title>
+    <link rel="shortcut icon" href="./assets/student-fav.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Voitto Class</h1>
+    </header>
+
+    <main>
+        <section id="my-students">
+            <h2>Meus alunos</h2>
+            <form id="filter">
+                <div class="input">
+                    <img src="./assets/search.svg" alt="" class="icon">
+                    <input
+                        type="text"
+                        name="name-filter"
+                        id="name-filter"
+                        placeholder="Buscar por nome"
+                    />
+                </div>
+                <button type="submit">
+                    Buscar
+                </button>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Prova 1</th>
+                        <th>Prova 2</th>
+                        <th>Trabalho</th>
+                        <th>Nota Final</th>
+                    </tr>
+                </thead>
+
+                <tbody></tbody>
+
+            </table>
+        </section>
+        <section id="add-new-student">
+            <h2>Adicionar novo aluno</h2>
+            <form id="add-student">
+                <div class="input-container">
+                    <label for="student-name">Aluno</label>
+                    <div class="input">
+                        <img src="./assets/student.svg" alt="" class="icon">
+                        <input
+                            type="text"
+                            name="student-name"
+                            id="student-name"
+                            placeholder="Nome do aluno"
+                            required
+                            oninput="handleChangeStudentName(this)"
+                            oninvalid="handleInvalidName(this)"
+                        >
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="first-exam">Primeira prova</label>
+                    <div class="input">
+                        <img src="./assets/clipboard.svg" alt="" class="icon">
+                        <input
+                            type="number"
+                            name="first-exam"
+                            id="first-exam"
+                            placeholder="0"
+                            min="0"
+                            max="100"
+                            required
+                            oninput="handleChangeGrade(this)"
+                            oninvalid="handleInvalidGrade(this)"
+                        >
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="second-exam">Segunda prova</label>
+                    <div class="input">
+                        <img src="./assets/clipboard.svg" alt="" class="icon">
+                        <input
+                            type="number"
+                            name="second-exam"
+                            id="second-exam"
+                            placeholder="0"
+                            min="0"
+                            max="100"
+                            required
+                            oninput="handleChangeGrade(this)"
+                            oninvalid="handleInvalidGrade(this)"
+                        >
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="project">Trabalho</label>
+                    <div class="input">
+                        <img src="./assets/clipboard.svg" alt="" class="icon">
+                        <input
+                            type="number"
+                            name="project"
+                            id="project"
+                            placeholder="0"
+                            min="0"
+                            max="100"
+                            required
+                            oninput="handleChangeGrade(this)"
+                            oninvalid="handleInvalidGrade(this)"
+                        >
+                    </div>
+                </div>
+                <button type="submit" disabled>
+                    Adicionar
+                </button>
+            </form>
+        </section>
+    </main>
+    <script src="./index.js"></script>
+</body>
+</html>

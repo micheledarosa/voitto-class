@@ -14,4 +14,4 @@ Projeto de formulário de alunos desenvolvido no curso **Fundamentos de JavaScri
 - Busca por nome de aluno;
 
 ## Como Testar 📚
-Você pode acessar o projeto clicando &#129046; [aqui]() &#129044;
+Você pode acessar o projeto clicando &#129046; [aqui](https://micheledarosa-voitto-class.netlify.app/) &#129044;
